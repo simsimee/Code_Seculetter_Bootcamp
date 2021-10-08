@@ -19,4 +19,7 @@
 2. [Data Mining Based Strategy for Detecting Malicious PDF Files](https://ieeexplore.ieee.org/document/8455965)/ 2018.09.06 / Samir G. Sayed, Mohmed Shawkey
 3. [Hidost: a static machine-learning-based detector of malicious files](https://link.springer.com/content/pdf/10.1186/s13635-016-0045-0.pdf)/ 2016.09.26 / Nedim Šrndić & Pavel Laskov 
 4. [Detection of malicious PDF files and directions for enhancements: A state-of-the art survey](https://www.sciencedirect.com/science/article/pii/S0167404814001606?casa_token=ewyvSRQBFmkAAAAA:DpxW4KmaPbM0oe8n6z2oObI7eIzUsVuwhGz_gy8gSqLstniQhuwShjqFT-je9Ol7T7AY_MZ4VXA)/ 2014.10.23 / Nir Nissim, Aviad Cohen, Chanan Glezer, Yuval Elovicia
+5. [A structural and content-based approach for a precise and robust detection of malicious PDF files](https://ieeexplore.ieee.org/abstract/document/7509925?casa_token=pCxlt1XsOoEAAAAA:3_QC0TeTuFg49lV46evto3db1HCUMqTcYczFHYCX-3bQmo_6XPdI7_YVUJPEu1CZxeynzQTt974)/ 2016.06.14 / Davide Maiorca, Davide Ariu, Igino Corona, Giorgio Giacinto
 
+### 가설
+악성 PDF 파일은 

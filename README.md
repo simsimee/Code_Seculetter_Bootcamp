@@ -22,4 +22,15 @@
 5. [A structural and content-based approach for a precise and robust detection of malicious PDF files](https://ieeexplore.ieee.org/abstract/document/7509925?casa_token=pCxlt1XsOoEAAAAA:3_QC0TeTuFg49lV46evto3db1HCUMqTcYczFHYCX-3bQmo_6XPdI7_YVUJPEu1CZxeynzQTt974)/ 2016.06.14 / Davide Maiorca, Davide Ariu, Igino Corona, Giorgio Giacinto
 
 ### 가설
-악성 PDF 파일은 정상 PDF 파일과 구조적으로나 다른 점이 있을 것이다.
+악성 PDF 파일은 정상 PDF 파일과 구조적으로 다른 점이 있을 것이다. PDF파일의 특성을 추출하여 악성 PDF를 분류해낼 수 있다.
+
+### 데이터셋
+![image](https://user-images.githubusercontent.com/75903850/136900239-006ff90f-0467-40d6-b8d9-0eff7c900996.png)    
+
+데이터는 시큐레터 기업에서 제공해주셨고 정상 PDF 문서 7674개, 악성 PDF 3011개의 PDF 문서로 이루어진 데이터.
+분류기준모델의 정확도 : 0.72
+
+### PDF feature extracion 및 selection (비정형 -> 정형)
+- 사용한 pdf parser : pikepdf. 팀프로젝트로 개인간 다른 parser를 이용하여 feature extraction 진행
+- pikepdf는 PDF를 생성, 조작, 구문 분석, 복구 등을 위한 라이브러리
+- pikepdf_parser.ipynb 파일에서 진행하였으며 

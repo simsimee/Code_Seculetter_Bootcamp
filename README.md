@@ -22,4 +22,4 @@
 5. [A structural and content-based approach for a precise and robust detection of malicious PDF files](https://ieeexplore.ieee.org/abstract/document/7509925?casa_token=pCxlt1XsOoEAAAAA:3_QC0TeTuFg49lV46evto3db1HCUMqTcYczFHYCX-3bQmo_6XPdI7_YVUJPEu1CZxeynzQTt974)/ 2016.06.14 / Davide Maiorca, Davide Ariu, Igino Corona, Giorgio Giacinto
 
 ### 가설
-악성 PDF 파일은 
+악성 PDF 파일은 정상 PDF 파일과 구조적으로나 다른 점이 있을 것이다.

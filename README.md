@@ -30,7 +30,34 @@
 데이터는 시큐레터 기업에서 제공해주셨고 정상 PDF 문서 7674개, 악성 PDF 3011개의 PDF 문서로 이루어진 데이터.
 분류기준모델의 정확도 : 0.72
 
-### PDF feature extracion 및 selection (비정형 -> 정형)
+### PDF feature extracion
 - 사용한 pdf parser : pikepdf. 팀프로젝트로 개인간 다른 parser를 이용하여 feature extraction 진행
 - pikepdf는 PDF를 생성, 조작, 구문 분석, 복구 등을 위한 라이브러리
-- pikepdf_parser.ipynb 파일에서 진행하였으며 
+- pikepdf_parser.ipynb 파일에서 진행하였으며 총 552개의 feature 를 추출
+
+### 비정형 데이터 -> 정형 데이터
+- json형태로 feature를 추출하였고 json을 csv파일로 변환
+- csv파일 형태를 dataframe으로 변환
+- pikepdf_feature.ipynb, model.ipynb 파일에서 진행
+
+### feature selection (여기서부터 model.ipynb 파일에서 진행)
+- 결측치가 60%이상인 feature 삭제
+- 이름이 비슷한 중복 feature 삭제
+- 최종적으로 13개의 feature selection
+
+#### 특성 상관계수
+![image](https://user-images.githubusercontent.com/75903850/136902218-27339c66-1673-428d-a529-51877db6f4f8.png)
+
+### 데이터 전처리
+- Size, Contents_Length 등 숫자형 데이터는 결측치 0
+- Author, Producer, PDFversion 등 범주형 데이터는 결측치를 'nan' 이라는 문자로 변환 (해당 정보를 포함하고있지 않은 것도 악성 PDF의 특성이 될 수 있겠다고 생각)
+- 범주형 데이터는 TargetEncoder를 사용하여 encoding 진행
+- MinMaxScaler를 이용하여 데이터 스케일링
+
+### 분류모델
+<img width="646" alt="스크린샷 2021-10-12 오후 3 30 22" src="https://user-images.githubusercontent.com/75903850/136903665-88311453-ce3b-4f22-bc9b-ee5b48ad4cef.png">
+- RandomForest, XGBoost, SVM 세 가지 모델을 validation set 으로 검증한 결과 비교
+- f1-score와 accuracy가 조금 더 앞서는 RandomForest 모델로 결정
+- 최종모델로 RandomizedSearchCV
+<img width="461" alt="스크린샷 2021-10-12 오후 3 34 00" src="https://user-images.githubusercontent.com/75903850/136904115-34eae127-a4bd-4c15-85cd-c24fe82fa9a0.png">
+

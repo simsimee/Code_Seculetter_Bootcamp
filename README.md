@@ -60,4 +60,13 @@
 - f1-score와 accuracy가 조금 더 앞서는 RandomForest 모델로 결정
 - 최종모델로 Randomized SearchCV 로 하이퍼파라미터 튜닝
 <img width="461" alt="스크린샷 2021-10-12 오후 3 34 00" src="https://user-images.githubusercontent.com/75903850/136904115-34eae127-a4bd-4c15-85cd-c24fe82fa9a0.png">
-- test set 분류 결과 **precision 0.92, recall 0.97, f1-score 0.94, accuracy 0.92**
+- test set 분류 결과 precision 0.92, recall 0.97, f1-score 0.94, accuracy 0.92
+
+### feature importance
+![image](https://user-images.githubusercontent.com/75903850/136904656-b000142f-471b-4f24-b1f3-a984ba06c663.png)
+![image](https://user-images.githubusercontent.com/75903850/136904673-2996eff2-1290-48ef-8e20-3bc24845f8c6.png)
+- Producer, Creator 는 Word, PPT, Adobe pdf 같은 어떤 확장자를 이용했는지와 컨텐츠의 길이, pdf의 크기 등이 가장 중요했음을 알 수 있었다.
+
+### 개선 방향
+- Pikepdf 모듈만 사용하는게 아니라 다른 pdf parser도 같이 이용해서 더 다양한 feature를 추출하고 그중에서 선택했으면 더 좋은 성능을 낼 수 있지 않았을까 싶고 모델의 Scoring을 recall에 좀 더 초점을 두어서, 악성 PDF를 정상으로 잘못 분류하지 않는 것이 악성 PDF에 대한 위험도를 조금 더 줄일 수 있을 것이라 .
+

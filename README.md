@@ -56,8 +56,8 @@
 
 ### 분류모델
 <img width="646" alt="스크린샷 2021-10-12 오후 3 30 22" src="https://user-images.githubusercontent.com/75903850/136903665-88311453-ce3b-4f22-bc9b-ee5b48ad4cef.png">
-- RandomForest, XGBoost, SVM 세 가지 모델을 validation set 으로 검증한 결과 비교
+- RandomForest, XGBoost, SVM 세 가지 모델을 validation set 으로 검증한 결과 비교    
 - f1-score와 accuracy가 조금 더 앞서는 RandomForest 모델로 결정
-- 최종모델로 RandomizedSearchCV
+- 최종모델로 Randomized SearchCV 로 하이퍼파라미터 튜닝
 <img width="461" alt="스크린샷 2021-10-12 오후 3 34 00" src="https://user-images.githubusercontent.com/75903850/136904115-34eae127-a4bd-4c15-85cd-c24fe82fa9a0.png">
-
+- test set 분류 결과 **precision 0.92, recall 0.97, f1-score 0.94, accuracy 0.92**

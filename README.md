@@ -30,7 +30,7 @@
 데이터는 시큐레터 기업에서 제공해주셨고 정상 PDF 문서 7674개, 악성 PDF 3011개의 PDF 문서로 이루어진 데이터.
 분류기준모델의 정확도 : 0.72
 
-### PDF feature extracion
+### PDF feature extraction
 - 사용한 pdf parser : pikepdf. 팀프로젝트로 개인간 다른 parser를 이용하여 feature extraction 진행
 - pikepdf는 PDF를 생성, 조작, 구문 분석, 복구 등을 위한 라이브러리
 - pikepdf_parser.ipynb 파일에서 진행하였으며 총 552개의 feature 를 추출
